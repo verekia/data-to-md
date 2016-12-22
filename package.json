@@ -1,0 +1,13 @@
+{
+  "name": "data-to-md",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/verekia/data-to-md.git",
+    "type": "git"
+  },
+  "author": "Jonathan Verrecchia <jonathan.verrecchia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^1.0.0"
+  }
+}
