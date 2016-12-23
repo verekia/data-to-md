@@ -12,10 +12,10 @@ function yamlToMarkdown(yamlString) {
       output += `## ${entry.h2}\n`
     }
     if (entry.hasOwnProperty('h3')) {
-      output += `## ${entry.h3}\n`
+      output += `### ${entry.h3}\n`
     }
     if (entry.hasOwnProperty('h4')) {
-      output += `## ${entry.h4}\n`
+      output += `### ${entry.h4}\n`
     }
     if (entry.hasOwnProperty('p')) {
       output += `${entry.p}\n`
