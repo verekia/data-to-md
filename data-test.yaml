@@ -1,0 +1,15 @@
+- h1: My Beautiful Table
+- table:
+  cols:
+    - Brandigous
+    - Model
+    - Pricezzz
+  rows:
+    -
+      - Apple
+      - Macbook Air
+      - 500€
+    -
+      - LG
+      - Nexus 5X
+      - 400€
