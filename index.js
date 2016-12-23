@@ -1,13 +1,24 @@
-const fs = require('fs-extra')
 const yaml = require('js-yaml')
 
-try {
-  const doc = yaml.safeLoad(fs.readFileSync('data-test.yaml', 'utf8'));
-  // console.log(doc);
+function yamlToMarkdown(yamlString) {
+  const doc = yaml.safeLoad(yamlString);
   let output = ''
   doc.forEach((entry) => {
+    output += '\n'
     if (entry.hasOwnProperty('h1')) {
-      output += `\n# ${entry.h1}\n\n`
+      output += `# ${entry.h1}\n`
+    }
+    if (entry.hasOwnProperty('h2')) {
+      output += `## ${entry.h2}\n`
+    }
+    if (entry.hasOwnProperty('p')) {
+      output += `${entry.p}\n`
+    }
+    if (entry.hasOwnProperty('ul')) {
+      entry.ul.forEach((li) => {
+        output += `- ${li}\n`
+      })
+      output += '\n'
     }
     if (entry.hasOwnProperty('table')) {
       output += entry.cols.reduce((a, b) =>
@@ -28,7 +39,7 @@ try {
       output += '\n'
     }
   })
-  console.log(output)
-} catch (e) {
-  console.log(e)
+  return output
 }
+
+module.exports = yamlToMarkdown

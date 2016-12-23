@@ -1,3 +1,6 @@
+const yamlToMarkdown = require('./index')
+
+const str = `
 - h1: My Current Inventory
 - h2: Technology
 - table:
@@ -20,3 +23,6 @@
   - South Park
   - Kaamelott
   - New Girl
+`
+
+console.log(yamlToMarkdown(str))
