@@ -5,7 +5,7 @@
     "url": "https://github.com/verekia/data-to-md.git",
     "type": "git"
   },
-  "author": "Jonathan Verrecchia <jonathan.verrecchia@gmail.com>",
+  "author": "Jonathan Verrecchia",
   "license": "MIT",
   "scripts": {
     "start": "node ."
